@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./src/js/common.js"></script>
+</head>
+<style>
+  .no-block{
+    padding: 20px;
+    background-color: rgb(183, 188, 190);
+  }
+  .block{
+    padding: 20px;
+    background-color: rgb(129, 28, 33);
+    color: #fff;
+  }
+  .code-script{
+    color: #aa096c;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <section class="no-block">
+      <h1>this page show how script block the page render</h1>
+      <hr />
+      <p>the script will block html content <strong> after </strong> the script if</p>
+
+      <h4>One:</h4>
+      <div class="code-script">
+        <code>
+          <p>script with src from other origin </p>
+          <pre>
+            script src="other-origin/demo.js"
+          </pre>
+
+          when the html parse to the script, the script is not ready to run, it need to be downloaded, so the browser can render content before the script
+        </code>
+      </div>
+
+
+      <h2>this section with gray backgrond is the content before blocking script</h2>
+      
+    </section>
+    <!-- <script type="text/javascript" src="./src/js/loop.js"></script> -->
+    <script type="text/javascript" src="https://wp.50d.top/wp-content/uploads/custom-css-js/8830.js"></script>
+    <!-- <script>
+      for (var i = 0; i < 1000000; i++) {
+        for (var j = 0; j < 1000; j++) {
+          if(i%50000 === 0){
+            console.log("i ==",i)
+          }
+        }
+      }
+      console.log(document.body.innerHTML);
+    </script> -->
+    <section class="block">
+      <h2>this section with red backgroud is the html content after block script</h2>
+      <img id="img" src="./src/images/golden-retriever.png" />
+    </section>
+  </div>
+</body>
+</html>
